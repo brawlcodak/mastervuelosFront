@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Mis Reservaciones</h2>
+  <div *ngIf="reservations && reservations.length > 0; else noReservations">
+    <div class="reservation" *ngFor="let item of reservations">
+      <p><strong>Vuelo:</strong> {{ item?.origin }} a {{item?.destination}}</p>
+      <p><strong>Fecha de Reserva:</strong> {{ currentDate }}</p>
+      <p><strong>Precio:</strong> {{ item.price| currency }}</p>
+    </div>
+  </div>
+  <ng-template #noReservations>
+    <p>No tienes reservaciones.</p>
+  </ng-template>
+</div>

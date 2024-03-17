@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="title">Estadísticas de Aerolíneas</h2>
+  <div *ngIf="topAirlines && topAirlines.length > 0; else noData">
+    <div class="airline-list">
+      <h3>Aerolíneas con más reservas:</h3>
+      <ul>
+        <li *ngFor="let airline of result" class="airline-item">
+          <span class="airline-name">{{ airline.name }}</span> - <span class="airline-count">{{ airline.count }} vuelos - {{airline.reservationsCount}} Reservaciones</span>
+        </li>
+      </ul>
+    </div>
+    <p class="total-airlines">Total de aerolíneas registradas: {{ result.length }}</p>
+  </div>
+  <ng-template #noData>
+    <p class="no-data-message">No hay datos disponibles.</p>
+  </ng-template>
+</div>
+
