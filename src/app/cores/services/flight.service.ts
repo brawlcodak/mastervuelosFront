@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FlightService {
-  private apiUrl = 'http://localhost:3000/api/flights';
+  private apiUrl = 'https://master-vuelos-api.onrender.com/api/flights';
   constructor(private http: HttpClient) { }
 
   registerFlight(flight: Flight): Observable<any> {

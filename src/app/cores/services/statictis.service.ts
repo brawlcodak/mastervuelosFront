@@ -7,7 +7,7 @@ import { Flight } from '../interfaces/flight.model';
   providedIn: 'root'
 })
 export class StatictisService {
-  private apiUrl = 'http://localhost:3000/api/flights';
+  private apiUrl = 'https://master-vuelos-api.onrender.com/api/flights';
 
   constructor(private http: HttpClient) { }
 

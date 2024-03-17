@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ResevationService {
-  private apiUrl = 'http://localhost:3000/api/reservations'; // URL de la API de reservas
+  private apiUrl = 'https://master-vuelos-api.onrender.com/api/reservations'; // URL de la API de reservas
 
   constructor(private http: HttpClient) { }
 
